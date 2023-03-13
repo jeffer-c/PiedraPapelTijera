@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Piedra Papel Tijera</title>
+</head>
+<body>
+	<h1>Juego de Piedra Papel Tijera</h1>
+	<!-- Área para igresar los valores. -->
+	<div class="areaInputs">
+		<p><label>Introduce el nombre del jugador </label><input id="nombre" type="text" name="nombre"></p>
+		<p><label>¿Cuántas partidas quieres jugar? </label><input id="partidas"	type="number" name="partidas" value="0"></p>
+		<button id="btnJugar" onclick="obtenerDatos();">¡JUGAR!</button>
+	</div>
+	<!-- Área de juego. -->
+	<div id="areaPartida">
+		<h3>Jugando la partida <span id="actual">0</span> de <span id="total">0</span>.</h3>
+		<!-- Selección de la mano del jugador. -->
+		<div id="jugador">
+			<img id="imgPiedra" class="noSeleccionado" src="img/piedraJugador.png" />
+			<img id="imgPapel" class="noSeleccionado" src="img/papelJugador.png" />
+			<img id="imgTijera" class="noSeleccionado" src="img/tijeraJugador.png" />
+		</div>
+		<!-- Confirmar selección. -->
+		<h2>Piedra, papel o tijera....  <button id="btnYa">¡YA!</button></h2>
+		<!-- Resultado elegido por la máquina. -->
+		<div>
+			<img class="styleMaquina seleccionado" id="imgMaquina" src="img/defecto.png" />
+		</div>
+	</div>
+	<!-- Área del historial. -->
+	<div class="areaHistorial">
+		<h3>Historial de partidas</h3>
+		<ul id="historial">
+		</ul>
+		<button id="btnReset">RESET</button>
+	</div>
+	<!-- JS -->
+	<script src="js/scripts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,65 @@
+/* Tener en cuenta que el diseño es resposivo. */
+body{background: rgb(120, 23, 23); color: white;}
+/* TITULO */
+h1{
+	text-align: center;
+	color: white;
+	text-shadow: rgb(84, 84, 84) 1px 0 10px;
+}
+/* IMAGENES */
+img {
+	width: 90px;
+	height: 90px;
+	margin: 10px;
+}
+button,img {cursor: pointer;}
+
+/* ESTILO IMAGENES */
+.styleMaquina{
+	visibility: hidden;
+	animation-name: flo;/* Creo una animación llamada flo. */
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	position: relative;
+	bottom: 30px;
+}
+/* MOVIMIENTO DE LA IMAGEN */
+@keyframes flo{50%{transform: translateY(30px);}}
+
+/* FONDO DE VALIDACIÓN */
+.fondoRojo {background-color: rgba(255, 0, 0, 0.502);}
+
+/* CALSE PARA LA SELECCION DE POSIBILIDADES */
+.seleccionado {
+	filter: drop-shadow(0em 0em 10px rgb(242, 255, 66));
+	opacity: 1;
+	width: 110px;
+	height: 110px;
+}
+.noSeleccionado {opacity: 0.5;}
+#btnYa {visibility: hidden; }
+
+/* AREAS DE PARTIDA */
+#areaPartida{ display: none;}
+#areaPartida,.areaInputs, .areaHistorial{
+	float: inline-start;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 20px;
+	background: rgba(0, 0, 0, 0.251);
+}
+button{
+	color: white;
+	font-weight: bold;
+	font-size: large;
+	padding: 10px;
+	background: rgb(10, 109, 46);
+	border-radius: 10px;
+	border: 0px;
+}
+li{
+	list-style-type: none;
+	padding-right: 45px;
+}
+input{border-radius: 5px;}
